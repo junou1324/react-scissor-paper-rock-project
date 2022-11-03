@@ -46,7 +46,18 @@ useEffect(()=>{
 ,[house])
   return (
     <div className="game">
-      my choice:{myChoice}<br/>
+      <div className="game__you">
+        <span className="text">You Picked</span>
+        <div className="icon icon--paper"></div>
+      </div>
+    </div>
+  )
+}
+
+export default Game
+
+/** 
+ *    my choice:{myChoice}<br/>
       House Choice:{house}<br/>
 
       Result:
@@ -54,8 +65,5 @@ useEffect(()=>{
       {playerWin=="lose" && <h2>You Lose</h2>}
       {playerWin=="draw" && <h2>You Draw</h2>}
       <Link to="/" onClick={()=>setHouse()}>Play Again</Link>
-    </div>
-  )
-}
-
-export default Game
+ * 
+*/
